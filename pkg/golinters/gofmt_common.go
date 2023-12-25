@@ -240,6 +240,8 @@ func getErrorTextForLinter(settings *config.LintersSettings, linterName string) 
 		if settings.Goimports.LocalPrefixes != "" {
 			text += " with -local " + settings.Goimports.LocalPrefixes
 		}
+	case goimportsReviserName:
+		text = "File is not `goimports-reviser`-ed"
 	}
 	return text
 }

@@ -5,7 +5,7 @@ import (
 	"errors"
 	"runtime"
 
-	"gopkg.in/yaml.v3"
+	yaml "gopkg.in/yaml.v3"
 )
 
 var defaultLintersSettings = LintersSettings{
@@ -930,4 +930,7 @@ type CustomLinterSettings struct {
 
 	// Settings plugin settings only work with linterdb.PluginConstructor symbol.
 	Settings any
+}
+
+type GoimportsReviserSettings struct {
 }
